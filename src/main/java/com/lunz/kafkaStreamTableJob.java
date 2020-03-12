@@ -2,18 +2,12 @@
 package com.lunz;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
-import org.apache.flink.api.common.typeinfo.TypeInformation;
-import org.apache.flink.api.common.typeinfo.Types;
-import org.apache.flink.api.java.io.jdbc.JDBCAppendTableSink;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
-import org.apache.flink.table.descriptors.Json;
-import org.apache.flink.table.descriptors.Kafka;
-import org.apache.flink.table.descriptors.Schema;
 
 import java.util.Properties;
 
@@ -45,7 +39,7 @@ public class kafkaStreamTableJob {
 
         tEnv.sqlQuery("select * from test");
         // source(tEnv);
-        sink1(tEnv, "");
+        //sink1(tEnv, "");
         env.execute("test init taxi fact table");
     }
 
@@ -60,46 +54,46 @@ public class kafkaStreamTableJob {
     //            .build();
     //
     //}
-    private static void source(StreamTableEnvironment tEnv, String topicName, String bootStrapServers) {
-        tEnv.connect(
-                new Kafka()
-                        .version("universal")
-                        .topic("taxi_behavior")
-                        .startFromEarliest()
-                        .property("bootstrap.servers", "47.104.134.253:9092")
-        ).withFormat(
-                new Json()
-        ).withSchema(
-                new Schema()
-                        .field("user_id", "Types.LONG")
-                        .field("item_id", "Types.LONG")
-                        .field("category_id", "Types.INT")
-                        .field("behavior", "Types.STRING")
-                        .field("ts", "Types.LONG")
-        )
-                .inAppendMode()
-                .registerTableSource("user_log");
-    }
+    //private static void source(StreamTableEnvironment tEnv, String topicName, String bootStrapServers) {
+    //    tEnv.connect(
+    //            new Kafka()
+    //                    .version("universal")
+    //                    .topic("taxi_behavior")
+    //                    .startFromEarliest()
+    //                    .property("bootstrap.servers", "47.104.134.253:9092")
+    //    ).withFormat(
+    //            new Json()
+    //    ).withSchema(
+    //            new Schema()
+    //                    .field("user_id", "Types.LONG")
+    //                    .field("item_id", "Types.LONG")
+    //                    .field("category_id", "Types.INT")
+    //                    .field("behavior", "Types.STRING")
+    //                    .field("ts", "Types.LONG")
+    //    )
+    //            .inAppendMode()
+    //            .registerTableSource("user_log");
+    //}
 
-    private static void sink1(StreamTableEnvironment tEnv, String sql) {
-        JDBCAppendTableSink tableSink = JDBCAppendTableSink.builder()
-                .setDrivername("com.mysql.cj.jdbc.Driver")
-                .setDBUrl("jdbc:mysql://localhost:3306/flink_dev")
-                .setUsername("root").setPassword("123456")
-                .setQuery("INSERT INTO pvuv_sink(dt, pv, uv) VALUES (?, ?, ?)")
-                .setParameterTypes(Types.STRING, Types.LONG, Types.LONG)
-                .build();
-
-        tEnv.registerTableSink("pvuv_sink",
-                new String[]{"dt", "pv", "uv"},
-                new TypeInformation[]{Types.STRING, Types.LONG, Types.LONG},
-                tableSink);
-
-        Table t1 = tEnv.sqlQuery("select " +
-                "date_format(ts, 'yyyy-mm-dd hh:00') as dt, count(*) as pv, count(distinct user_id) as uv " +
-                "from user_log " +
-                "group by date_format(ts, 'yyyy-mm-dd hh:00')");
-        t1.insertInto("pvuv_sink");
-    }
+    //private static void sink1(StreamTableEnvironment tEnv, String sql) {
+    //    JDBCAppendTableSink tableSink = JDBCAppendTableSink.builder()
+    //            .setDrivername("com.mysql.cj.jdbc.Driver")
+    //            .setDBUrl("jdbc:mysql://localhost:3306/flink_dev")
+    //            .setUsername("root").setPassword("123456")
+    //            .setQuery("INSERT INTO pvuv_sink(dt, pv, uv) VALUES (?, ?, ?)")
+    //            .setParameterTypes(Types.STRING, Types.LONG, Types.LONG)
+    //            .build();
+    //
+    //    tEnv.registerTableSink("pvuv_sink",
+    //            new String[]{"dt", "pv", "uv"},
+    //            new TypeInformation[]{Types.STRING, Types.LONG, Types.LONG},
+    //            tableSink);
+    //
+    //    Table t1 = tEnv.sqlQuery("select " +
+    //            "date_format(ts, 'yyyy-mm-dd hh:00') as dt, count(*) as pv, count(distinct user_id) as uv " +
+    //            "from user_log " +
+    //            "group by date_format(ts, 'yyyy-mm-dd hh:00')");
+    //    t1.insertInto("pvuv_sink");
+    //}
 
 }

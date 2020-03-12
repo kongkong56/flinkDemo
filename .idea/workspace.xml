@@ -42,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/下载/flink-1.10.0-bin-scala_2.11/flink-1.10.0/lib" />
+    <property name="last_opened_file_path" value="D:/下载/flink-1.10.0-bin-scala_2.11/flink-1.10.0/lib/flink-table_2.11-1.10.0.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,14 +58,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lunz.connector" />
       <recent name="com.lunz" />
       <recent name="com.lunz.tablesql.blink" />
       <recent name="com.lunz.tablesql.flink" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InitKafkaDataJob">
-    <configuration name="InitKafkaDataJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lunz.InitKafkaDataJob" />
+  <component name="RunManager" selected="Application.kafkaSourceJob">
+    <configuration name="DataStreamSourceJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.DataStreamSourceJob" />
       <module name="flinkDemo" />
       <extension name="coverage">
         <pattern>
@@ -77,12 +78,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="kafkaStreamTableJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lunz.kafkaStreamTableJob" />
+    <configuration name="JavaDataStreamTransformationJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.JavaDataStreamTransformationJob" />
       <module name="flinkDemo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lunz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaSinkJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.JavaSinkJob" />
+      <module name="flinkDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lunz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kafkaSinkJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.connector.kafkaSinkJob" />
+      <module name="flinkDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lunz.connector.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kafkaSourceJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.connector.kafkaSourceJob" />
+      <module name="flinkDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lunz.connector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,8 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InitKafkaDataJob" />
-        <item itemvalue="Application.kafkaStreamTableJob" />
+        <item itemvalue="Application.kafkaSourceJob" />
+        <item itemvalue="Application.kafkaSinkJob" />
+        <item itemvalue="Application.JavaSinkJob" />
+        <item itemvalue="Application.JavaDataStreamTransformationJob" />
+        <item itemvalue="Application.DataStreamSourceJob" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +153,8 @@
       <workItem from="1583455545257" duration="9743000" />
       <workItem from="1583799116547" duration="24433000" />
       <workItem from="1583909170080" duration="974000" />
-      <workItem from="1583911086188" duration="8980000" />
+      <workItem from="1583911086188" duration="9189000" />
+      <workItem from="1583971329873" duration="24742000" />
     </task>
     <servers />
   </component>
@@ -118,59 +162,75 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2660" y="274" key="FileChooserDialogImpl" timestamp="1583903792938">
+    <state x="2623" y="227" key="#Notifications" timestamp="1583983682282">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583903792938" />
-    <state width="1877" height="104" key="GridCell.Tab.0.bottom" timestamp="1583920748925">
+    <state x="2623" y="227" key="#Notifications/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583983682282" />
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1584001391257">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584001391257" />
+    <state x="2610" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1583974101788">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583974101788" />
+    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1584002211160">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="447" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584002211160" />
+    <state x="2675" y="274" key="FileChooserDialogImpl" timestamp="1583983693825">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2675" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583983693825" />
+    <state width="1877" height="439" key="GridCell.Tab.0.bottom" timestamp="1584006533892">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403558" />
-    <state width="1877" height="104" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583920748925" />
-    <state width="1877" height="104" key="GridCell.Tab.0.center" timestamp="1583920748925">
+    <state width="1877" height="439" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533892" />
+    <state width="1877" height="439" key="GridCell.Tab.0.center" timestamp="1584006533892">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403558" />
-    <state width="1877" height="104" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583920748925" />
-    <state width="1877" height="104" key="GridCell.Tab.0.left" timestamp="1583920748925">
+    <state width="1877" height="439" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533892" />
+    <state width="1877" height="439" key="GridCell.Tab.0.left" timestamp="1584006533891">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403558" />
-    <state width="1877" height="104" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583920748925" />
-    <state width="1877" height="104" key="GridCell.Tab.0.right" timestamp="1583920748925">
+    <state width="1877" height="439" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533891" />
+    <state width="1877" height="439" key="GridCell.Tab.0.right" timestamp="1584006533892">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403558" />
-    <state width="1877" height="104" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583920748925" />
-    <state width="1877" height="372" key="GridCell.Tab.1.bottom" timestamp="1583914544090">
+    <state width="1877" height="439" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533892" />
+    <state width="1877" height="439" key="GridCell.Tab.1.bottom" timestamp="1584006533702">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403384" />
-    <state width="1877" height="372" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583914544090" />
-    <state width="1877" height="372" key="GridCell.Tab.1.center" timestamp="1583914544090">
+    <state width="1877" height="439" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533702" />
+    <state width="1877" height="439" key="GridCell.Tab.1.center" timestamp="1584006533701">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403384" />
-    <state width="1877" height="372" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583914544090" />
-    <state width="1877" height="372" key="GridCell.Tab.1.left" timestamp="1583914544090">
+    <state width="1877" height="439" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533701" />
+    <state width="1877" height="439" key="GridCell.Tab.1.left" timestamp="1584006533701">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403384" />
-    <state width="1877" height="372" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583914544090" />
-    <state width="1877" height="372" key="GridCell.Tab.1.right" timestamp="1583914544090">
+    <state width="1877" height="439" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533701" />
+    <state width="1877" height="439" key="GridCell.Tab.1.right" timestamp="1584006533702">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817403384" />
-    <state width="1877" height="372" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583914544090" />
-    <state x="2890" y="178" key="Maven.ArtifactSearchDialog" timestamp="1583902207817">
+    <state width="1877" height="439" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584006533702" />
+    <state x="2890" y="178" key="Maven.ArtifactSearchDialog" timestamp="1583978661879">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="418" y="147" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583816605648" />
-    <state x="2890" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583902207817" />
-    <state x="2360" y="94" key="SettingsEditor" timestamp="1583903794738">
+    <state x="2890" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583978661879" />
+    <state x="2360" y="94" key="SettingsEditor" timestamp="1584002728485">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2360" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583903794738" />
+    <state x="2360" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584002728485" />
     <state x="2582" y="248" width="596" height="544" key="find.popup" timestamp="1583912493318">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -180,6 +240,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2254" y="215" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583469738143" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584004376803">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584004376803" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -191,8 +255,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lunz/kafkaStreamTableJob.java</url>
-          <line>34</line>
+          <line>28</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lunz/MysqlSink.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lunz/MysqlSink.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lunz/JavaSinkJob.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lunz/MysqlSink.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

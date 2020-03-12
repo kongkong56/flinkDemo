@@ -42,14 +42,14 @@ public class InitKafkaDataJob {
 		// set up the streaming execution environment
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-		DataStream<String> ds= env.readTextFile("/root/taxi_behavior.json");
+		DataStream<String> ds= env.readTextFile("/root/yitong/taxi_behavior.log");
 
 		FlinkKafkaProducer myProducer = new FlinkKafkaProducer(
-				"47.104.134.253:9092",
+				"114.215.130.62:9092",
 				"user_behavior",
 				new SimpleStringSchema()
   );
 		ds.addSink(myProducer);
-		env.execute("start kafka producer");
+		env.execute("初始化kafka topic数据");
 	}
 }
