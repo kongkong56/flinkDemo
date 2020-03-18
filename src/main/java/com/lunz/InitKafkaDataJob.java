@@ -46,7 +46,7 @@ public class InitKafkaDataJob {
 
 		FlinkKafkaProducer myProducer = new FlinkKafkaProducer(
 				"114.215.130.62:9092",
-				"user_behavior",
+				"taxi_behavior",
 				new SimpleStringSchema()
   );
 		ds.addSink(myProducer);

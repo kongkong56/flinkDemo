@@ -39,7 +39,7 @@ public class kafkaStreamSql2JobBAK {
                 "WITH ( \n" +
                 "    'connector.type' = 'kafka',  -- 使用 kafka connector\n" +
                 "    'connector.version' = 'universal',  -- kafka 版本，universal 支持 0.11 以上的版本\n" +
-                "    'connector.topic' = 'user_behavior',  -- kafka topic\n" +
+                "    'connector.topic' = 'test_behavior',  -- kafka topic\n" +
                 "    'connector.startup-mode' = 'earliest-offset',  -- 从起始 offset 开始读取\n" +
                 "    'connector.properties.zookeeper.connect' = 'localhost:2181',  -- zookeeper 地址\n" +
                 "    'connector.properties.bootstrap.servers' = 'localhost:9092',  -- kafka broker 地址\n" +

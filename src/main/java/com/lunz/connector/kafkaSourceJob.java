@@ -15,9 +15,14 @@ import java.util.Properties;
 public class kafkaSourceJob {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        env.setMaxParallelism(1);
+
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers","114.215.130.62:9092");
         properties.setProperty("group.id", "test");
+        properties.setProperty("key.deserializer","org.apache.kafka.common.serialization.StringDeserializer");
+        properties.setProperty("value.deserializer","org.apache.kafka.common.serialization.StringDeserializer");
+        properties.setProperty("auto.offset.reset","latest");
         String topic = "user_behavior";
         DataStreamSource<String> source = env.addSource(new FlinkKafkaConsumer<>(topic, new SimpleStringSchema(), properties));
         source.print();

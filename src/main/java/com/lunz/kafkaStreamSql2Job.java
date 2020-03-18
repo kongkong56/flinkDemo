@@ -1,16 +1,9 @@
 
 package com.lunz;
 
-import org.apache.flink.api.common.typeinfo.TypeInformation;
-import org.apache.flink.api.common.typeinfo.Types;
-import org.apache.flink.api.java.io.jdbc.JDBCAppendTableSink;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
-import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
-import org.apache.flink.table.descriptors.Json;
-import org.apache.flink.table.descriptors.Kafka;
-import org.apache.flink.table.descriptors.Schema;
 
 public class kafkaStreamSql2Job {
 
@@ -58,9 +51,6 @@ public class kafkaStreamSql2Job {
         tableEnv.sqlUpdate(
                 "insert into test26 select *  from TRIP_INPUT_26");
         tableEnv.execute("模拟数据进入到事实表");
-
-
-
 
 
 // SQL query with a registered table
