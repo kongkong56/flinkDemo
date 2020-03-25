@@ -1,0 +1,8 @@
+{"namespace":"com.alibaba.dts.formats.avro",
+ "type": "record",
+      "name": "category",
+      "fields" : [
+            {"name": "Id", "type": "int"},
+            {"name": "MessageBodyId", "type": "string"}
+      ]
+ }
