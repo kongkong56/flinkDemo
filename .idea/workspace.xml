@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c3a60a-2e58-4700-aab0-1ca4b5159085" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/avro/Record.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/avro/User.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/avro/category.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/avro/message.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicKafkaFormatSqlJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/KafkaAvro2Kafka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafka/UserAvro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/user.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dev/CustomerCenterInfoOds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/CustomerKafka2MysqlOds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/CommonSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/CommonSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicSqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicSqlJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicKafkaFormatSqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lunz/dynamic/Kafka2MysqlOds.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../debezium" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,13 +88,26 @@
       <recent name="D:\ZhongRui\myGithub\flinkDemo\src\main\avro" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DynamicKafkaFormatSqlJob">
+  <component name="RunManager" selected="Application.CustomerKafka2MysqlOds">
     <configuration name="BlinkStreamSQLJobExample5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lunz.connector.hbase.BlinkStreamSQLJobExample5" />
       <module name="flinkDemo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lunz.connector.hbase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerKafka2MysqlOds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.dynamic.CustomerKafka2MysqlOds" />
+      <module name="flinkDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lunz.dynamic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,19 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicKafkaFormatSqlJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lunz.dynamic.DynamicKafkaFormatSqlJob" />
-      <module name="flinkDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lunz.dynamic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DynamicSqlJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lunz.dynamic.DynamicSqlJob" />
       <module name="flinkDemo" />
@@ -148,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="kafkaSinkJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lunz.connector.kafkaSinkJob" />
+    <configuration name="Kafka2MysqlOds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lunz.dynamic.Kafka2MysqlOds" />
       <module name="flinkDemo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lunz.connector.hbase.*" />
+          <option name="PATTERN" value="com.lunz.dynamic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DynamicKafkaFormatSqlJob" />
+        <item itemvalue="Application.CustomerKafka2MysqlOds" />
+        <item itemvalue="Application.Kafka2MysqlOds" />
         <item itemvalue="Application.DynamicSqlJob" />
         <item itemvalue="Application.BlinkStreamSQLJobExample5" />
         <item itemvalue="Application.DataStreamSourceJob" />
-        <item itemvalue="Application.kafkaSinkJob" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +185,10 @@
       <workItem from="1584596381661" duration="1410000" />
       <workItem from="1584663793531" duration="39750000" />
       <workItem from="1585113243200" duration="11855000" />
+      <workItem from="1585181126508" duration="3852000" />
+      <workItem from="1585197004088" duration="3478000" />
+      <workItem from="1585267574085" duration="10988000" />
+      <workItem from="1585287168299" duration="1755000" />
     </task>
     <servers />
   </component>
@@ -222,54 +219,54 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583974101788" />
-    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1585129013093">
+    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1585198284102">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="447" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129013093" />
-    <state x="2675" y="274" width="440" height="486" key="FileChooserDialogImpl" timestamp="1584683096270">
+    <state width="447" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585198284102" />
+    <state x="2675" y="274" width="440" height="486" key="FileChooserDialogImpl" timestamp="1585181723120">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2675" y="274" width="440" height="486" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584683096270" />
-    <state width="1877" height="251" key="GridCell.Tab.0.bottom" timestamp="1585129196781">
+    <state x="2675" y="274" width="440" height="486" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585181723120" />
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1585288582833">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="155" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585026757847" />
-    <state width="1877" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129196781" />
-    <state width="1877" height="251" key="GridCell.Tab.0.center" timestamp="1585129196780">
+    <state width="1877" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100269" />
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288582833" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1585288582833">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="155" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585026757847" />
-    <state width="1877" height="251" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129196780" />
-    <state width="1877" height="251" key="GridCell.Tab.0.left" timestamp="1585129196780">
+    <state width="1877" height="195" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100269" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288582833" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1585288582833">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="155" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585026757847" />
-    <state width="1877" height="251" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129196780" />
-    <state width="1877" height="251" key="GridCell.Tab.0.right" timestamp="1585129196781">
+    <state width="1877" height="195" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100269" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288582833" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1585288582833">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="155" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585026757847" />
-    <state width="1877" height="251" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129196781" />
-    <state width="1877" height="251" key="GridCell.Tab.1.bottom" timestamp="1585129189814">
+    <state width="1877" height="195" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100269" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288582833" />
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom" timestamp="1585288453198">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="482" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584578362578" />
-    <state width="1877" height="251" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129189814" />
-    <state width="1877" height="251" key="GridCell.Tab.1.center" timestamp="1585129189814">
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100119" />
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288453198" />
+    <state width="1877" height="258" key="GridCell.Tab.1.center" timestamp="1585288453198">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="482" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584578362578" />
-    <state width="1877" height="251" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129189814" />
-    <state width="1877" height="251" key="GridCell.Tab.1.left" timestamp="1585129189813">
+    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100119" />
+    <state width="1877" height="258" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288453198" />
+    <state width="1877" height="258" key="GridCell.Tab.1.left" timestamp="1585288453198">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="482" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584578362578" />
-    <state width="1877" height="251" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129189813" />
-    <state width="1877" height="251" key="GridCell.Tab.1.right" timestamp="1585129189814">
+    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100119" />
+    <state width="1877" height="258" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288453198" />
+    <state width="1877" height="258" key="GridCell.Tab.1.right" timestamp="1585288453198">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="482" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584578362578" />
-    <state width="1877" height="251" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585129189814" />
+    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585288100119" />
+    <state width="1877" height="258" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585288453198" />
     <state x="2890" y="178" key="Maven.ArtifactSearchDialog" timestamp="1584074788916">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -283,11 +280,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2534" y="81" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585126723841" />
-    <state x="2582" y="248" width="596" height="544" key="find.popup" timestamp="1584691139292">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="662" y="248" width="596" height="544" key="find.popup" timestamp="1585287940443">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="248" width="596" height="544" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583817486854" />
-    <state x="2582" y="248" width="596" height="544" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584691139292" />
+    <state x="662" y="248" width="596" height="544" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585287940443" />
+    <state x="2582" y="248" width="596" height="544" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585281640434" />
     <state x="2254" y="215" key="new project wizard" timestamp="1584498093774">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -351,28 +348,58 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-json-1.10.0.jar!/org/apache/flink/formats/json/JsonRowDeserializationSchema.class</url>
-          <line>86</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-json-1.10.0.jar!/org/apache/flink/formats/json/JsonRowDeserializationSchema.class</url>
           <line>88</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-dist_2.11-1.10.0.jar!/org/apache/flink/streaming/runtime/tasks/OperatorChain.class</url>
-          <line>475</line>
-          <option name="timeStamp" value="18" />
+          <line>477</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-dist_2.11-1.10.0.jar!/org/apache/flink/streaming/runtime/tasks/OperatorChain.class</url>
-          <line>474</line>
-          <option name="timeStamp" value="19" />
+          <line>484</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-dist_2.11-1.10.0.jar!/org/apache/flink/streaming/runtime/tasks/OperatorChain.class</url>
-          <line>473</line>
-          <option name="timeStamp" value="20" />
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-json-1.10.0.jar!/org/apache/flink/formats/json/JsonRowDeserializationSchema.class</url>
+          <line>86</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-sql-connector-kafka_2.11-1.10.0.jar!/org/apache/flink/streaming/connectors/kafka/internal/KafkaFetcher.class</url>
+          <line>71</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-json-1.10.0.jar!/org/apache/flink/formats/json/JsonRowDeserializationSchema.class</url>
+          <line>85</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-sql-connector-kafka_2.11-1.10.0.jar!/org/apache/flink/streaming/connectors/kafka/internal/KafkaFetcher.class</url>
+          <line>70</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-sql-connector-kafka_2.11-1.10.0.jar!/org/apache/flink/streaming/util/serialization/JSONKeyValueDeserializationSchema.class</url>
+          <line>32</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-sql-connector-kafka_2.11-1.10.0.jar!/org/apache/flink/streaming/util/serialization/JSONKeyValueDeserializationSchema.class</url>
+          <line>36</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-sql-connector-kafka_2.11-1.10.0.jar!/org/apache/flink/streaming/connectors/kafka/internal/KafkaFetcher.class</url>
+          <line>76</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../下载/flink-1.10.0/lib/flink-table-blink_2.11-1.10.0.jar!/org/apache/flink/table/runtime/operators/wmassigners/WatermarkAssignerOperator.class</url>
+          <line>61</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicSqlJob.java</url>
@@ -382,19 +409,16 @@
           </properties>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/lunz/dynamic/DynamicKafkaFormatSqlJob.java</url>
-          <line>11</line>
-          <properties class="com.lunz.dynamic.DynamicKafkaFormatSqlJob" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="var3" />
+        <watch expression="root" />
+        <watch expression="record.value()" />
+        <watch expression="record" />
+        <watch expression="var5" />
+        <watch expression="value" />
       </configuration>
     </watches-manager>
   </component>
